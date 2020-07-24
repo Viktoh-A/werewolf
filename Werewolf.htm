@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WereWolf</title>
+</head>
+<body>
+<h1>
+    Hi I'm ViQ and I'm a Shapeshifter,
+</h1>
+<h3>Due to My Scheduled Events throughout the week, I Shape-Shift into a Monster. But don't be Scared, all you need is to note the days I Change and never come around in those days </h3>
+
+<h2>Days</h2>
+<ul>
+    <li>Monday</li>
+    <li>Tuesday</li>
+    <li>Wednesday</li>
+    <li>Thursday</li>
+    <li>Friday</li>
+    <li>Saturday</li>
+    <li>Sunday</li>
+</ul>
+<br>
+<br>
+<br>
+<h3>To Find Out the Days I Change, type <mark><code>'console.log(<i>A Day</i>.whatAmI()) e.g=> console.log(Monday.whatAmI())</code></mark>, in the Console</h3>
+<script>
+const Journal = [
+    ["Church","bumblebee", "Printed"],
+    ["School","FullMoon", "Charged"],
+    ["Popcorn","cherry", "Printed"],
+    ["Church","Hungry", "Pizza"],
+    ["Sleep","Cake", "Read"],
+]
+
+class Day {
+    constructor(suppings){
+        this.suppings = suppings 
+    } 
+
+    hasChanged(){
+       for (let i = 0; i < this.suppings.length; i++) {
+           if(this.suppings[i] === "FullMoon" || this.suppings[i] === "Pizza"){
+               return true
+           }
+           
+       }
+        return false 
+    }
+
+    whatAmI(){
+        if(this.hasChanged()){
+            console.log("Ahhh I'M a WereWolf")
+        }
+        else {
+            console.log("Ahhh I'm a Guy Like you")
+        }
+    }
+}
+
+let Monday = new Day(Journal[0]);
+let Tuesday = new Day(Journal[1]);
+let Wednesday = new Day(Journal[2]);
+let Thursday = new Day(Journal[3]);
+let Friday = new Day(Journal[4]);
+let Saturday = new Day(Journal[0]);
+let Sunday = new Day(Journal[1]);
+
+const whatHappened = [Monday.hasChanged(),Tuesday.hasChanged(), Wednesday.hasChanged(), Thursday.hasChanged(), Friday.hasChanged()];
+
+
+
+
+// console.log(Monday)
+// console.log(whatHappened)
+
+</script>
+</body>
+</html>
